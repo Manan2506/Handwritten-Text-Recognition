@@ -39,7 +39,7 @@ for f1 in files:
     #img = cv2.dilate(thresh, kernel, iterations=1) 
 
     img = cv2.erode(thresh, kernel, iterations=1)
-    cv2.imwrite("re.jpg", img)
+    #cv2.imwrite("re.jpg", img)
     #print(f1.type)
     
     completeName = os.path.join(save_path, f1[-16:-4]+".txt")
@@ -86,7 +86,7 @@ for f1 in files:
             img1=img[i+20:i+150]
             res = wordSegmentation(img1, kernelSize=101, sigma=11, theta=10, minArea=1000)
         
-        cv2.imwrite("img1.jpg",img1)
+        #cv2.imwrite("img1.jpg",img1)
         #int(input("from1"))
         te=[]
         l=np.full((100,1),255)
